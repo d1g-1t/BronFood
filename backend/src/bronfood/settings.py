@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('DEBUG', 'false').lower() in ('true', '1', 'yes')
 
 ENV_NAME = os.getenv('ENV_NAME', 'local')
 
